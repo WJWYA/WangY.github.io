@@ -47,7 +47,7 @@ var app = new Vue({
         //歌曲地址
         musicUrl: "",
         //歌曲封面
-        musicCover: "img/cover.JPG",
+        musicCover: "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2832479654,3774035840&fm=26&gp=0.jpg",
         //歌曲评论
         hotComments: [],
         //动画播放状态
