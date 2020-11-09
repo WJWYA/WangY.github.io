@@ -1,0 +1,363 @@
+body,
+    ul,
+    dl,
+    dd {
+      margin: 0px;
+      padding: 0px;
+    }
+body{
+  background-color: #76b3d6;
+}
+.wrap {
+  /* position: fixed; */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f3f3f3;
+  /* background-size: 100% 100%; */
+}
+
+.play_wrap {
+  width: 1000px;
+  height: 544px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -500px;
+  margin-top: -272px;
+  /* background-color: #f9f9f9;  */
+}
+
+.search_bar {
+  width: 100%;
+  height: 60px;
+  background-color: #033345;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  align-items: center;/* flex属性：交叉轴对齐方式*/
+  justify-content: space-between;/* flex属性：项目在主轴上的对齐方式*/
+  position: relative;
+  z-index: 11;
+}
+
+.search_bar img {
+  margin-left: 23px;
+}
+
+.search_bar input {
+  margin-right: 53px;
+  width: 296px;
+  height: 34px;
+  border-radius: 20px;
+  border: 0px;
+  background: url("https://i.loli.net/2020/03/23/9FeKnVlohsY3krO.png") 265px center no-repeat
+  rgba(234, 236, 236, 0.192);
+  text-indent: 15px;
+  outline: none;
+  color: #f3f3f3;
+}
+.search_bar input::-webkit-input-placeholder{
+  color: #f3f3f3;
+}
+
+.center_con {
+  height: 435px;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  position: relative;
+}
+.song_wrapper {
+  width: 320px;
+  height: 435px;
+  box-sizing: border-box;
+  padding: 10px;
+  list-style: none;
+  position: absolute;
+  background-color: white;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+
+/* .song_stretch {
+  width: 600px;
+} */
+.song_list {
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+  }
+  .song_list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .song_list li {
+    font-size: 13px;
+    color: #033345;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 300px;
+    padding-left: 10px;
+  }
+
+  .song_list li:nth-child(odd) {
+    background-color: rgba(118,179,214, 0.3);
+  }
+
+  .song_list li a {
+    display: block;
+    width: 17px;
+    height: 17px;
+    background-image: url("/音乐播放器/img/playing.png");
+    background-size: 100%;
+    margin-right: 5px;
+    box-sizing: border-box;
+  }
+
+  .song_list li b {
+    font-weight: normal;
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 20px;
+    white-space: nowrap;
+    
+  }
+
+  /* .song_stretch .song_list li b {
+    width: 200px;
+  }
+
+  .song_stretch .song_list li em {
+    width: 150px;
+  } */
+
+  .song_list li span {
+    width: 23px;
+    height: 17px;
+    margin-right: 10px;
+  }
+  .song_list li span i {
+    display: block;
+    /* background-color: #033345; */
+    background-size: 100%;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    background-image: url("/音乐播放器/img/MV.png");
+  }
+
+  /* .song_list li em,
+  .song_list li i {
+    font-style: normal;
+    width: 100px;
+  } */
+
+  .player_con {
+    width: 340px;
+    height: 435px;
+    position: absolute;
+    left: 320px;
+    /* background-color: #3d82ae; */
+    /* background-color: #3a96a8; */
+    top: 0px;
+  }
+
+  /* .player_con2 {
+    width: 400px;
+    height: 435px;
+    position: absolute;
+    left: 200px;
+    top: 0px;
+  }
+
+  .player_con2 video {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    width: 355px;
+    height: 265px;
+  } */
+
+  .disc {
+    position: absolute;
+    left: 45px;
+    top: 60px;
+    z-index: 9;
+  }
+  .cover {
+    position: absolute;
+    left: 98px;
+    top: 111px;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    z-index: 8;
+  }
+
+.musicOn{
+  color: #033345;
+  margin-top: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.musicOn b{
+    font-size: 15px;
+    font-weight:  300;
+
+}
+
+  /* 旋转的动画 */
+  @keyframes Rotate {
+    from {
+      transform: rotateZ(0);
+    }
+    to {
+      transform: rotateZ(360deg);
+    }
+  }
+  /* 旋转的类名 */
+  .autoRotate {
+    animation-name: Rotate;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+  }
+  /* 是否正在播放 */
+  .player_con.playing .disc,
+  .player_con.playing .cover {
+    animation-play-state: running;
+  }
+
+  .play_bar {
+    position: absolute;
+    left: 170px;
+    top: -10px;
+    z-index: 12;
+    transform: rotate(-25deg);
+    transform-origin: 12px 12px;
+    transition: 1s;
+  }
+
+  /* 播放杆 转回去 */
+  .player_con.playing .play_bar {
+    transform: rotate(3deg);
+  }
+
+
+  .comment_wrapper {
+    width: 320px;
+    height: 385px;
+    list-style: none;
+    position: absolute;
+    left: 660px;
+    top: 0px;
+    padding: 25px 10px;
+    background-color: white;
+ 
+  }
+  .comment_wrapper .title {
+    position: absolute;
+    top: 0;
+    height: 25px;
+    margin-top: 5px;
+    color: #033345;
+  }
+  .comment_wrapper .comment_list {
+    overflow: auto;
+    height: 410px;
+    
+  }
+  .comment_wrapper .comment_list::-webkit-scrollbar {
+    display: none;
+  }
+  .comment_wrapper dl {
+    padding-top: 10px;
+    padding-left: 55px;
+    position: relative;
+    margin-bottom: 5px;
+    /* border-bottom: 1px solid #3d82ae; */
+
+  }
+
+  .comment_wrapper dt {
+    position: absolute;
+    left: 4px;
+    top: 10px;
+  }
+
+  .comment_wrapper dt img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+  }
+
+  .comment_wrapper dd {
+    font-size: 12px;
+  }
+
+  .comment_wrapper .name {
+    font-weight: bold;
+    color: #033345;
+    padding-top: 5px;
+  }
+
+  .comment_wrapper .detail {
+    /* color: #3d82ac; */
+    color: #76b3d6;
+    margin-top: 5px;
+    line-height: 18px;
+  }
+
+
+  .audio_con {
+    height: 50px;
+    background-color: #f1f3f4;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+  }
+  .myaudio {
+    width: 980px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 10px;
+    outline: none;
+    background-color: #f1f3f4;
+  }
+
+
+
+  .video_con video {
+    position: fixed;
+    width: 1000px;
+    /* height: 544px; */
+    left: 50%;
+    top: 50%;
+    margin-top: -272px;
+    transform: translateX(-50%);
+    z-index: 990;
+  }
+  .video_con .mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 980;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .wy{
+      font-family: 华文宋体;
+      color: rgb(232, 233, 236);
+  }
