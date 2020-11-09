@@ -113,7 +113,7 @@ body{
     display: block;
     width: 17px;
     height: 17px;
-    background-image: url("/音乐播放器/img/playing.png");
+    background-image: url("https://s1.ax1x.com/2020/11/09/BHiilD.png");
     background-size: 100%;
     margin-right: 5px;
     box-sizing: border-box;
@@ -149,7 +149,7 @@ body{
     width: 17px;
     height: 17px;
     cursor: pointer;
-    background-image: url("/音乐播放器/img/MV.png");
+    background-image: url("https://s1.ax1x.com/2020/11/09/BHiw1U.png");
   }
 
   /* .song_list li em,
