@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+## 欢迎来到王一昂的音乐播放器
 
-You can use the [editor on GitHub](https://github.com/WJWYA/WangY.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+&emsp;&emsp;[王一昂的音乐播放器](https://wjwya.github.io/WangY.github.io/) 是基于Vue和axios开发一款在线音乐播放软件，该播放器使用网易云API，歌曲全面，具有播放歌曲、查看评论以及播放mv等功能。
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- - -
 
-### Markdown
+## 音乐播放器
+### 界面展示 
+#### 初始化界面 
+![初始化界面](https://s1.ax1x.com/2020/11/10/BLD6zj.jpg) 
+> 该播放器界面主要有`search_bar`,`center_con`，`audio_con`以及`video_con`四部分组成，其中`center_con`包含`歌曲列表容器`、`歌曲信息容器`以及`评论容器`。 
+#### 歌曲搜索界面 
+![](https://s1.ax1x.com/2020/11/10/BLykIf.jpg) 
+> 用户可以在顶部`搜索框`中输入歌曲名或者歌手名进行歌曲搜索,在左侧`列表容器`中会出现搜索结果列表，每一条搜索结果包括`播放按钮`，`歌曲名`，`演唱者`以及部分含有`mv按钮`。 
+#### 歌曲播放界面 
+![](https://s1.ax1x.com/2020/11/10/BL6YAP.jpg) 
+> 用户点击`播放按钮`播放音乐，此时`歌曲信息容器`中黑胶影碟进行旋转播放，并替换为`正在播放歌曲封面`，黑胶影碟下方会出现正在播放歌曲的名字以及演唱者。在`评论容器`中会出现`热门评论列表`，每条评论包括`评论者头像`，`昵称`以及`留言`。 
+#### mv播放界面 
+![](https://s1.ax1x.com/2020/11/10/BLck8S.jpg) 
+> 用户点击`mv按钮`播放mv，此时会出现`mv视频`和`黑色遮罩层`，点击`黑色遮罩层`即刻退出mv播放界面。 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/WJWYA/WangY.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
