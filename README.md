@@ -7,7 +7,7 @@
 ## 音乐播放器
 ### 界面展示 
 #### 初始化界面 
-![初始化界面](https://s1.ax1x.com/2020/11/10/BLD6zj.jpg) 
+![](https://s1.ax1x.com/2020/11/10/BLD6zj.jpg) 
 > 该播放器界面主要有`search_bar`,`center_con`，`audio_con`以及`video_con`四部分组成，其中`center_con`包含`歌曲列表容器`、`歌曲信息容器`以及`评论容器`。 
 #### 歌曲搜索界面 
 ![](https://s1.ax1x.com/2020/11/10/BLykIf.jpg) 
